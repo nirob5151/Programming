@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<conio.h>
+int main()
+{
+    int n;
+    double x;
+    x= 20.435;
+    n= (int)x;
+    printf("Value of n is:%d\n",n);
+    printf("Value of x is:%lf",x);
+    getch();
+}

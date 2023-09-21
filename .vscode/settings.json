@@ -1,0 +1,10 @@
+{
+    "C_Cpp.errorSquiggles": "disabled",
+    "files.associations": {
+        "1006": "c",
+        "SERICE.C": "cpp",
+        "iostream": "cpp",
+        "ostream": "cpp",
+        "string": "cpp"
+    }
+}
