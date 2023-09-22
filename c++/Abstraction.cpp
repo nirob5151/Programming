@@ -5,7 +5,7 @@ class Mobileuser
     public:
         void call()
          {
-                cout<<"Hello"<<endl;
+                cout<<"Someone: Hello King"<<endl;
          }
          virtual void sendmassage()=0;
 };
@@ -15,18 +15,18 @@ class King:public Mobileuser
 public:
     void sendmassage()
     {
-        cout<<"Hi I am king"<<endl;
+        cout<<"King: Hi I am king ";
+        cout<<"and This is My friend Nirob"<<endl;
     }
 };
 
 class Nirob:public Mobileuser
 {
 
-public:
     public:
           void sendmassage()
           { 
-            cout<<"Hi This is Nirob"<<endl;
+            cout<<"Niob: Hi"<<endl;
           }
           
 };
