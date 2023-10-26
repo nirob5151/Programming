@@ -1,3 +1,5 @@
+/*Create a class called Employee with a name, salary, and hire date as private attributes.
+ With the help of a friend function, calculate the total year of service.*/
 #include<bits/stdc++.h>
 using namespace std;
 class Employee
