@@ -1,9 +1,11 @@
+/*The base class name is student and that has private data Name, ID, and Mark.
+ Print that information with the help of a derived class named Result.*/
 #include<bits/stdc++.h>
 using namespace std;
 class Student
 {
 private:
-string name;
+string name;git
 int id;
 
     
@@ -35,7 +37,7 @@ class child:private Student
          cin>>mark;
     }
     void print_mark()
-    {
+    { 
         print();
         cout<<"Student Mark:"<<mark;
 

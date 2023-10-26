@@ -1,21 +1,24 @@
-#include<bits/stdc++.h>
-using namespace std;
-class A
-{
-    int n1;
-    public:
-    void ABC()
-    {
-        cin>>n1
-    }
+/*Class A has an int n1 and class B has an int n2. Calculate the sum of two variables in class C.*/
 
-};
-class B:public A
-{
-    int n2;
+#include<iostream>
+#include<cstring>
+using namespace std;
+  class A{
+  public:
+    int n1=30;
+  };
+  class B{;
     public:
-    void DEF()
-    {
-        
-    }
+    int n2=40;
+  };
+  class C: public A, public B{;
+    public:
+    int sum=n1+n2;
+    void getsum(){
+    cout<<sum<<endl;}
+  };
+  int main(){
+    C ob;
+    ob.getsum();
+return 0;
 }

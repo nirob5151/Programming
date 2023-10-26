@@ -1,3 +1,5 @@
+/*Create a class called &quot; Employee&quot; with a name, salary, and hire date attributes,
+ and a method to calculate years of service.*/
 #include<bits/stdc++.h>
 using namespace std;
 class Employee
@@ -7,7 +9,7 @@ class Employee
     int salary,hire_year,current_year;
     void yearofservice()
     {
-        cout<<"------------Enter Employee Data------------"<<endl;
+        //cout<<"------------Enter Employee Data------------"<<endl;
         cout<<"1.Enter Name: ";
         cin>>name;
         cout<<"2.Enter Salary: ";

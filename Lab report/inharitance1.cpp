@@ -1,3 +1,4 @@
+/*Write a C++ Program to Access Protected Data Members using Inheritance.*/
 #include<bits\stdc++.h>
 using namespace std;
 class Mother

@@ -1,3 +1,5 @@
+/*Take an array in the parent class and calculate the average of that array's elements in the child class.*/
+
 #include<bits/stdc++.h>
 using namespace std;
 class Mother
