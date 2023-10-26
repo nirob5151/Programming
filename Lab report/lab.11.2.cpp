@@ -1,7 +1,7 @@
-/*A class grand has two protected type variable IDs &amp; Marks.
+/*A class grand has two protected type variable IDs , Marks.
  A parent class inherits from the grand class. 
 Another class child inherits from the parent class. 
-The child class prints the ID &amp; Marks of the grand class.*/
+The child class prints the ID , Marks of the grand class.*/
 #include<bits/stdc++.h>
 using namespace std;
 class Grand

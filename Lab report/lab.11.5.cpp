@@ -1,5 +1,7 @@
+/*Suppose, you have an object obj  of a class named myClass which contains two public integer member 
+ u and v. Your task is to apply concepts of operator overloading to overload the operator -- 
+so that you can perform the decrement of both u and v through the following instructions ob-- or --ob.*/
 #include<iostream>
-
 using namespace std;
 
 class Myclass

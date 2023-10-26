@@ -5,8 +5,8 @@ using namespace std;
 class Mother
 {
     private:
-    int i,n,sum=0,a[10];
-    float avg;
+    int i,n;
+    float sum=0.0,a[100];
     public:
     void king()
     {
@@ -17,12 +17,11 @@ class Mother
     {
         for(i=0;i<n;i++)
         {
-            cout<<"Array Is:"<<i;
+            cout<<i+1<<"."<<"Array Is:";
             cin>>a[i];
-            sum+=a[i];
+             sum += a[i];
         }
-        avg=a[i]/n;
-        cout<<"Average Is: "<<avg;
+        cout<<"Average Is: "<<sum/n;
     }
 };
 class child:private Mother
@@ -35,7 +34,7 @@ class child:private Mother
     void cout()
     {
        queen();
-        
+    
     }
 };
 int main()

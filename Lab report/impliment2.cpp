@@ -33,9 +33,20 @@ class Student
     }
     
 };
+int Maxi(Student students[], int numStudents) {
+    int maxMark = -1;  // Initialize to a low value
+
+    for (int i = 0; i < numStudents; i++) {
+        if (students[i].marks > maxMark) {
+            maxMark = students[i].marks;
+        }
+    }
+
+    return maxMark;
+}
 int main()
 {
-    Student ob[30];
+    Student ob[n];
     int n,i;
     cout<<"Number of Student: ";
     cin>>n;
@@ -48,6 +59,9 @@ int main()
     {
         ob[i].get_info();
     }
+    int maxMark = Maxi(ob, n);
+    cout << "Maximum Mark: " << maxMark << endl;
+
     return 0;
 }
 

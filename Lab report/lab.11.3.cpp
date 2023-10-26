@@ -27,8 +27,10 @@ class Name
 };
 int main()
 {
+    string n,m;
+    cin>>n>>m;
     Name ob;
-    ob.name(KING,KHAN);
+    ob.name(n,m);
     ob.print();
 
 }
