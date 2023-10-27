@@ -23,10 +23,10 @@ class Data
             {
                 cout<<"Month Is Not In calander";
             }
-           // else if(year!<0)
-           // {
-               // cout<<"Year is not in Calender";
-           // }
+            else if(year<0)
+           {
+                cout<<"Year is not in Calender";
+           }
             else
             cout<<"Date is: "<<day<<"/"<<month<<"/"<<year;
     }

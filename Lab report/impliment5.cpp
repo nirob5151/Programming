@@ -6,25 +6,30 @@ class Employee
 {
     private:
     string name;
-    int salary,year_of_join;
+    int salary;
+    int year_of_join,current_year;
     public:
     friend int information(Employee ob);
 };
      int information(Employee ob)
      {
-        cout<<"1.Enter Name: ";
-        cin>>name;
-        cout<<"2.Enter Salary: ";
-        cin>>salary;
-        cout<<"3.Enter Hire Date: ";
-        cin>>year_of_join;
-        cout<<"Employ 1: "<<name<<" "<<year_of_join<<" "<<endl;
-
-     };
+        cout<<"Enter Name: ";
+        cin>>ob.name;
+        cout<<"Enter Salary: ";
+        cin>>ob.salary;
+        cout<<"Enter Hire Year: ";
+        cin>>ob.year_of_join;
+        cout<<"Enter Curent Year: ";
+        cin>>ob.current_year;
+       // system("cls");
+        cout<<"Employ info: "<<endl;
+        cout<<"Name:"<<ob.name<<endl<<"Year Of Joine: "<<ob.year_of_join<<endl;
+        cout<<"Total year of service: "<<ob.current_year- ob.year_of_join;
+     }
      int main()
      {
         Employee ob;
-        ob.information(ob);
+       int year_of_servic=information(ob);
         return 0;
      }
      
