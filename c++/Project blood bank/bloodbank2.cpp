@@ -19,7 +19,9 @@ void addDonor() {
     if (numDonors < MAX_DONORS) {
         Donor newDonor;
         cout << "Enter donor name: ";
-        cin >> newDonor.name;
+        //cin >> newDonor.name;
+        cin.ignore(); 
+        getline(cin,newDonor.name);
         cout<<"Enter Your Id: ";
         cin>>newDonor.id;
         cout << "Enter blood type: ";
