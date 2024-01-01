@@ -11,7 +11,8 @@ int main(void)
     };
     struct node *head,*newnode,*temp;
     head=0;
-    int choice;
+    int choice=1;
+    int count;
     while (choice)
     {
         newnode=(struct node *)malloc(sizeof(struct node));
@@ -33,9 +34,12 @@ int main(void)
     temp=head;
     while (temp!=0)
     {
-        cout<<temp->deta;
+        cout<<"Linked List Is: "<<temp->deta<<endl;
         temp=temp->next;
+        count++;
+
     }
+    cout<<"New Node Is: "<<count;
     
    getch(); 
     
