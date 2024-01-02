@@ -12,7 +12,7 @@ int main(void)
     struct node *head,*newnode,*temp;
     head=0;
     int choice=1;
-    int count;
+    int count=0;
     while (choice)
     {
         newnode=(struct node *)malloc(sizeof(struct node));
@@ -39,7 +39,7 @@ int main(void)
         count++;
 
     }
-    cout<<"New Node Is: "<<count;
+    cout<<"There are "<<count<<" Node";
     
    getch(); 
     
