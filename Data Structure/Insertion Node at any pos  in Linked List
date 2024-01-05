@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+
+    struct node
+    {
+        int deta;
+        struct node *next;
+    };
+    struct node *head=0,*newnode,*temp;
+    void add()
+    {
+    int choice=1;
+    while (choice)
+    {
+        struct node * newnode=(struct node *)malloc(sizeof(struct node));
+        cout<<"Enter your deta: ";
+        cin>>newnode->deta;
+        newnode->next=0;
+        if (head==0)
+        {
+            head=temp=newnode;
+        }
+        else
+        {
+            temp->next=newnode;
+            temp=newnode;
+        }
+        cout<<"Do you want to continue 0 or 1 :";
+        cin>>choice;
+    }
+    void print()
+{
+    int count=0;
+    temp=head;
+    while (temp!=0)
+    {
+        cout<<"Linked List Is: "<<temp->deta;
+        temp=temp->next;
+        count++;
+        cout<<endl;
+    }
+    cout<<"There are "<<count<<" Node"<<endl;
+ }
+ 
