@@ -3,6 +3,7 @@ using namespace std;
 int main()
 {
     int i,j,N=5,K,item,LA[5]={5,10,15,20,25};
+
     cin>>K;
     item=LA[K];
     if (item<=0 || N>item)
@@ -11,7 +12,7 @@ int main()
     }
     else
     {
-    for ( i = item-1; i < N-1; i++)
+    for ( i = K-1; i < N-1; i++)
     {
         LA[i]=LA[i+1];
     }
