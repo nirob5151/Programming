@@ -16,4 +16,5 @@ int main()
         a[j+1]=temp;
         cout<<" "<<i;
     }
+    return 0;
 }
