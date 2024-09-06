@@ -36,9 +36,7 @@ using namespace std;
     {
         cout<<"Linked List Is: "<<temp->deta;
         temp=temp->next;
-        count++;
-        cout<<endl;
+        
     }
-    cout<<"There are "<<count<<" Node"<<endl;
  }
  

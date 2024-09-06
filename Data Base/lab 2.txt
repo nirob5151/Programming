@@ -1,0 +1,52 @@
+CREATE TABLE Department (
+    Dept_Name VARCHAR(30) PRIMARY KEY,
+    Dept_ID INT,
+    Establish_Year INT
+    
+);
+
+INSERT INTO Department VALUES("CSE",201,2012);
+INSERT INTO Department VALUES("EEE",103,2013);
+INSERT INTO Department VALUES("BBA",104,2014);
+INSERT INTO Department VALUES("ENG",102,2015);
+
+CREATE TABLE Department (
+    Dept_Name VARCHAR(30) PRIMARY KEY,
+    Dept_ID INT,
+    Establish_Year INT
+    
+);
+CREATE TABLE employee(
+    E_id INT PRIMARY KEY,
+    Name VARCHAR(30),
+    Salary INT,
+    Hometown VARCHAR(50),
+    E_dept VARCHAR(30),
+    CONSTRAINT E_dept FOREIGN KEY(E_dept) REFERENCES department(Dept_Name)
+    
+);
+
+INSERT INTO student VALUES(201,"Nirob",3.20,"Dinajpur","CSE");
+INSERT INTO student VALUES(102,"Bulbul",3.20,"Gopalganj","CSE");
+INSERT INTO student VALUES(103,"Maruf",3.20,"Brahmanbaria","CSE");
+INSERT INTO student VALUES(104,"Shakil",3.20,"Brasial","CSE");
+INSERT INTO student VALUES(10,5"Nahid",3.20,"Natore","DLD");
+
+INSERT INTO employee VALUES(101,"Nirob",220,"Dinajpur","CSE");
+INSERT INTO employee VALUES(101,"Bulbul",220,"Gopalganj","EEE");
+INSERT INTO employee VALUES(101,"Maruf",220,"Brahmanbaria","MAT");
+INSERT INTO employee VALUES(101,"Shakil",220,"Brasial","EEE");
+INSERT INTO employee VALUES(101,"Nahid",220,"Natore","DLD");
+
+SELECT * FROM student;
+SELECT * FROM employee;
+SELECT * FROM department;
+SELECT Student_id, S_dept FROM student;
+SELECT E_id, E_dept FROM employee;
+
+
+
+ALTER TABLE employee
+DROP PRIMARY key;
+ALTER TABLE employee
+ADD CONSTRAINT Dept_Name PRIMARY KEY (employee);

@@ -1,0 +1,80 @@
+CREATE TABLE CITIZEN (
+	C_ID INT,
+	C_NAME VARCHAR (10),
+	C_HOME VARCHAR (10),
+	AGE INT,
+	OCCUPATION VARCHAR (15),
+	GENDER VARCHAR (6),
+	SALARY INT,
+	CONSTRAINT PK_CITIZEN PRIMARY KEY (C_ID)
+);
+
+
+INSERT INTO CITIZEN VALUES (1, 'Alice', 'Dhaka', 25, 'Teacher', 'Male', 50000);
+INSERT INTO CITIZEN VALUES (2, 'Bob', 'Dhaka', 56, 'Service', 'Male', 60000);
+INSERT INTO CITIZEN VALUES (3, 'Charlie', 'Ctg', 71, 'Retired', 'Male', 10000);
+INSERT INTO CITIZEN VALUES (4, 'Erin', 'Ctg', 13, 'Student', 'Female', 500);
+INSERT INTO CITIZEN VALUES (5, 'Dave', 'Dhaka', 45, 'Service', 'Male', 40000);
+INSERT INTO CITIZEN VALUES (6, 'Faythe', 'Gazipur', 54, 'Doctor', 'Female', 55000);
+INSERT INTO CITIZEN VALUES (7, 'Grace', 'Gazipur', 65, 'Musician', 'Female', 5000);
+INSERT INTO CITIZEN VALUES (8, 'Ivan', 'Dhaka', 56, 'Engineer', 'Male', 60000);
+INSERT INTO CITIZEN VALUES (9, 'Frank', 'Ctg', 23, 'Student', 'Male', 1000);
+INSERT INTO CITIZEN VALUES (10, 'Micheal', 'Comilla', 32, 'Teacher', 'Male', 45000);
+INSERT INTO CITIZEN VALUES (11, 'Niaj', 'Comilla', 51, 'Farmer', 'Male', 20000);
+INSERT INTO CITIZEN VALUES (12, 'Heidi', 'Khulna', 15, 'Student', 'Female', 1500);
+INSERT INTO CITIZEN VALUES (13, 'Ted', 'Ctg', 25, 'Business', 'Male', 100000);
+INSERT INTO CITIZEN VALUES (14, 'Walter', 'Comilla', 52, 'Doctor', 'Male', 70000);
+INSERT INTO CITIZEN VALUES (15, 'Victor', 'Gazipur', 53, 'Teacher', 'Male', 50000);
+INSERT INTO CITIZEN VALUES (16, 'Judy', 'Dhaka', 35, 'Musician', 'Female', 50000);
+INSERT INTO CITIZEN VALUES (17, 'Pat', 'Khulna', 43, 'Service', 'Male', 50000);
+INSERT INTO CITIZEN VALUES (18, 'Olivia', 'Khulna', 34, 'Service', 'Female', 45000);
+INSERT INTO CITIZEN VALUES (19, 'Trent', 'Ctg', 16, 'Student', 'Male', 500);
+INSERT INTO CITIZEN VALUES (20, 'Peggy', 'Comilla', 32, 'Business', 'Female', 120000);
+INSERT INTO CITIZEN VALUES (21, 'Wendy', 'Ctg', 25, 'Musician', 'Female', 100000);
+INSERT INTO CITIZEN VALUES (22, 'Oscar', 'Gazipur', 14, 'Student', 'Male', 400);
+INSERT INTO CITIZEN VALUES (23, 'Mallet', 'Dhaka', 25, 'Engineer', 'Male', 50000);
+
+1)SELECT * FROM citizen;
+
+2)SELECT C_NAME, AGE, OCCUPATION FROM citizen;
+
+3)SELECT C_NAME, C_HOME FROM citizen
+  WHERE C_HOME = 'Dhaka';
+
+4)SELECT C_NAME, C_HOME,AGE FROM citizen
+  WHERE AGE<45;
+
+5)SELECT* FROM citizen
+  WHERE SALARY BETWEEN 50000 AND 90000;
+
+6)SELECT* FROM citizen
+  WHERE GENDER= 'Female';
+
+7)SELECT* FROM citizen
+  WHERE OCCUPATION IN('Doctor','Engineer','Retired');
+
+8)SELECT C_ID, C_NAME, SALARY FROM citizen
+  WHERE OCCUPATION IN('Musician','Business');
+
+9)SELECT* FROM citizen
+  WHERE OCCUPATION = 'Doctor' OR OCCUPATION = 'Engineer';
+
+10)SELECT* FROM citizen
+   ORDER BY SALARY ASC;
+
+11)SELECT C_NAME, AGE FROM citizen
+   ORDER BY AGE DESC, C_NAME ASC;
+
+12)SELECT DISTINCT C_HOME AS 'Unique District' FROM citizen;
+
+
+13)UPDATE update_citizen
+   SET C_HOME = "Chittagong" WHERE C_HOME = "Ctg";
+   SELECT * FROM update_citizen;
+
+14)DELETE FROM update_citizen LIMIT 10;
+
+15)UPDATE update_citizen
+   SET SALARY = SALARY*1.30;
+
+SELECT *FROM update_citizen;
