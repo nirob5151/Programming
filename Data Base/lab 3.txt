@@ -34,47 +34,34 @@ INSERT INTO CITIZEN VALUES (21, 'Wendy', 'Ctg', 25, 'Musician', 'Female', 100000
 INSERT INTO CITIZEN VALUES (22, 'Oscar', 'Gazipur', 14, 'Student', 'Male', 400);
 INSERT INTO CITIZEN VALUES (23, 'Mallet', 'Dhaka', 25, 'Engineer', 'Male', 50000);
 
-1)SELECT * FROM citizen;
+1.SELECT * FROM citizen;
 
-2)SELECT C_NAME, AGE, OCCUPATION FROM citizen;
+2.SELECT C_NAME, AGE, OCCUPATION FROM citizen;
 
-3)SELECT C_NAME, C_HOME FROM citizen
-  WHERE C_HOME = 'Dhaka';
+3.SELECT C_NAME, C_HOME FROM citizen WHERE C_HOME = 'Dhaka';
 
-4)SELECT C_NAME, C_HOME,AGE FROM citizen
-  WHERE AGE<45;
+4.SELECT C_NAME, C_HOME,AGE FROM citizen WHERE AGE<45;
 
-5)SELECT* FROM citizen
-  WHERE SALARY BETWEEN 50000 AND 90000;
+5.SELECT* FROM citizen WHERE SALARY BETWEEN 50000 AND 90000;
 
-6)SELECT* FROM citizen
-  WHERE GENDER= 'Female';
+6.SELECT* FROM citizen WHERE GENDER= 'Female';
 
-7)SELECT* FROM citizen
-  WHERE OCCUPATION IN('Doctor','Engineer','Retired');
+7.SELECT* FROM citizen WHERE OCCUPATION IN('Doctor','Engineer','Retired');
 
-8)SELECT C_ID, C_NAME, SALARY FROM citizen
-  WHERE OCCUPATION IN('Musician','Business');
+8.SELECT C_ID, C_NAME, SALARY FROM citizen WHERE OCCUPATION IN('Musician','Business');
 
-9)SELECT* FROM citizen
-  WHERE OCCUPATION = 'Doctor' OR OCCUPATION = 'Engineer';
+9.SELECT* FROM citizen WHERE OCCUPATION = 'Doctor' OR OCCUPATION = 'Engineer';
 
-10)SELECT* FROM citizen
-   ORDER BY SALARY ASC;
+10.SELECT* FROM citizen ORDER BY SALARY ASC;
 
-11)SELECT C_NAME, AGE FROM citizen
-   ORDER BY AGE DESC, C_NAME ASC;
+11.SELECT C_NAME, AGE FROM citizen ORDER BY AGE DESC, C_NAME ASC;
 
-12)SELECT DISTINCT C_HOME AS 'Unique District' FROM citizen;
+12.SELECT DISTINCT C_HOME AS 'Unique District' FROM citizen;
 
 
-13)UPDATE update_citizen
-   SET C_HOME = "Chittagong" WHERE C_HOME = "Ctg";
-   SELECT * FROM update_citizen;
+13.UPDATE update_citizen SET C_HOME = "Chittagong" WHERE C_HOME = "Ctg"; SELECT * FROM update_citizen;
 
-14)DELETE FROM update_citizen LIMIT 10;
+14.DELETE FROM update_citizen LIMIT 10;
 
-15)UPDATE update_citizen
-   SET SALARY = SALARY*1.30;
-
+15.UPDATE update_citizen SET SALARY = SALARY*1.30;
 SELECT *FROM update_citizen;
