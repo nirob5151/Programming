@@ -1,28 +1,44 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
-int main()
-{
-    int N=30,K,BA[30]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30};
-    int l=0,r=N-1,mid;
-    cout<<"Enter Iteam betwen 1-30 you want to search ";
-    cin>>K;
-    while (l<r)
+int BinarySearch(int arr[], int x, int lv, int uv){
+    if (lv<=uv)
     {
-        mid=(l+r)/2;
-        if (K==BA[mid])
+        int mid=(lv+uv)/2;
+        if (arr[mid]==x)
         {
-            cout<<"search index in:"<<BA[mid];
-            break;
+            return mid;
         }
-        else if(K<BA[mid])
+        else if (arr[mid]<x)
         {
-            r=mid-1;
-        }else{
-            l=mid+1;
-        } 
+            BinarySearch(arr,x,mid+1,uv);
+        }
+        else{
+            BinarySearch(arr,x,lv,mid-1);
+        }
     }
-    if (l>r)
+    else
+    return -1;
+    
+}
+int main(){
+    int len;
+    cout<<"Enter Array Size: ";
+    cin>>len;
+    int arr[len];
+    cout<<"Enter Elements: ";
+    for (int i = 0; i < len; i++)
     {
-        cout<<"search not found!!";
-    }    
+        cin>>arr[i];
+    }
+    int checkVal;
+    cout<<"Enter a value which you want to searccch: ";
+    cin>>checkVal;
+    int checkIndex= BinarySearch(arr,checkVal, 0,len-1);
+    if (checkIndex != -1)
+    {
+        cout<<checkVal<<" Index- "<<checkIndex<<" Position- "<<checkIndex+1<<endl;
+    }
+    else
+    cout<<"Not Found"<<endl;
+ return 0;
 }
